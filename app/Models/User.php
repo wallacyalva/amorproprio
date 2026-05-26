@@ -3,15 +3,15 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Tymon\JWTAuth\Contracts\JWTSubject; 
 
-class User extends Authenticatable
+class User extends Authenticatable implements JWTSubject 
 {
-    /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
+    /** @use HasFactory<UserFactory> */
 
     /**
      * The attributes that are mass assignable.
@@ -45,5 +45,21 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+    
+    /**
+     * Retorna a chave primária do utilizador (geralmente o ID) para inserir no token.
+     */
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+
+    /**
+     * Retorna um array com dados extras (custom claims) que você queira colocar no token.
+     */
+    public function getJWTCustomClaims()
+    {
+        return [];
     }
 }

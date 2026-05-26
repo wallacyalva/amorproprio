@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "user_name": "Juliana Moura da Silva Costa",
+        "staff": "Acolhida da ONG",
+        "message": "“O Amor Próprio de Itajai foi um abraço quando mais precisei. Encontrei acolhimento, apoio e mulheres incriveis que me mostraram que eu não estava sozinha nessa caminhada.”",
+        "img": "https://i.ibb.co/pvsDZJKN/Sem-t-tulo6.png"
+    },
+    {
+        "id": 2,
+        "user_name": "Sandra Regina de Castro",
+        "staff": "Voluntária do Brechó",
+        "message": "“Poder contribuir com o brechó solidário e ver como cada doação se transforma em ajuda real para mulheres enfrentando o câncer de mama é a minha maior alegria.”",
+        "img": "https://i.ibb.co/pvsDZJKN/Sem-t-tulo6.png"
+    },
+    {
+        "id": 3,
+        "user_name": "Beatriz Nogueira Lima",
+        "staff": "Paciente em Tratamento",
+        "message": "“Os grupos de apoio psicológico foram fundamentais para mim. Aqui eu ganhei não só orientação médica, mas uma nova família que me dá forças para lutar todos os dias.”",
+        "img": "https://i.ibb.co/pvsDZJKN/Sem-t-tulo6.png"
+    },
+    {
+        "id": 4,
+        "user_name": "Camila Fernandes Alves",
+        "staff": "Sobrevivente",
+        "message": "“Hoje eu posso dizer que venci o câncer, e grande parte dessa vitória eu devo à rede de apoio incrível que encontrei na Amor Próprio. Gratidão eterna a todas!”",
+        "img": "https://i.ibb.co/pvsDZJKN/Sem-t-tulo6.png"
+    },
+    {
+        "id": 5,
+        "user_name": "Teresa Martins Soares",
+        "staff": "Aluna da Oficina de Bordado",
+        "message": "“A oficina terapêutica me devolveu a autoestima e a paz mental. É um momento onde esquecemos os problemas da doença, damos risadas e criamos laços lindos.”",
+        "img": "https://i.ibb.co/pvsDZJKN/Sem-t-tulo6.png"
+    },
+    {
+        "id": 6,
+        "user_name": "Fernanda Almeida Ramos",
+        "staff": "Acolhida da ONG",
+        "message": "“Quando recebi o diagnóstico, o chão sumiu. Mas ao conhecer o projeto e ver tantas mulheres guerreiras sorrindo, logo entendi que havia muita vida pela frente.”",
+        "img": "https://i.ibb.co/pvsDZJKN/Sem-t-tulo6.png"
+    },
+    {
+        "id": 7,
+        "user_name": "Luciana Cardoso Pires",
+        "staff": "Doadora",
+        "message": "“A transparência e o carinho com que a ONG trata cada paciente me motivam a continuar ajudando. É um trabalho sério que realmente transforma vidas na nossa região.”",
+        "img": "https://i.ibb.co/pvsDZJKN/Sem-t-tulo6.png"
+    },
+    {
+        "id": 8,
+        "user_name": "Renata Vasconcelos",
+        "staff": "Participante das Palestras",
+        "message": "“A informação salva vidas. As campanhas de prevenção me ensinaram sobre o autoexame de uma forma leve e acolhedora. Um serviço de saúde pública maravilhoso!”",
+        "img": "https://i.ibb.co/pvsDZJKN/Sem-t-tulo6.png"
+    },
+    {
+        "id": 9,
+        "user_name": "Marta Guedes Sampaio",
+        "staff": "Voluntária",
+        "message": "“Doar meu tempo para ajudar a montar os kits pós-mastectomia me ensinou o verdadeiro significado da empatia. Eu sinto que recebo muito mais amor do que entrego.”",
+        "img": "https://i.ibb.co/pvsDZJKN/Sem-t-tulo6.png"
+    },
+    {
+        "id": 10,
+        "user_name": "Amanda Souza Teixeira",
+        "staff": "Familiar de Paciente",
+        "message": "“Vocês acolheram não apenas a minha mãe, mas a nossa família inteira. Esse suporte humano que a ONG oferece para os familiares em um momento tão difícil não tem preço.”",
+        "img": "https://i.ibb.co/pvsDZJKN/Sem-t-tulo6.png"
+    }
+]

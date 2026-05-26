@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "name": "Titulo da area informativa",
+        "content": "Apoio a Mulher com Câncer de mama" 
+    },
+    {
+        "id": 2,
+        "name": "Sub-Titulo da area informativa",
+        "content": "Empoderamento e Acolhimento" 
+    },
+    {
+        "id": 3,
+        "name": "Texto da area informativa",
+        "content": "Bem-vinda à rede Amor Próprio. Juntas somos mais fortes. Oferecemos Apoio emocional, workshops e uma comunidade acolhedora." 
+    },
+    {
+        "id": 4,
+        "name": "Texto da area sobre nos",
+        "content": "Amor Próprio é dedicada a apoiar mulheres na luta contra o câncer. Oferecemos acolhimento, informações sobre acesso a tratamentos e recursos essenciais assista ao vídeo para entender nossa missão e como podemos ajudar."
+    },
+    {
+        "id": 5,
+        "name": "Link watts area sobre nos",
+        "content": "https://wa.me/5547999782324?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20organiza%C3%A7%C3%A3o%20amor%20pr%C3%B3prio%2C%20poderia%20me%20ajudar%20%3F" 
+    },
+    {
+        "id": 6,
+        "name": "Valor doado no mês",
+        "content": "R$ 15.000" 
+    },
+    {
+        "id": 7,
+        "name": "Associadas",
+        "content": "450 +" 
+    },
+    {
+        "id": 8,
+        "name": "Produtos vendidos",
+        "content": "1.200+" 
+    },
+    {
+        "id": 9,
+        "name": "Titulo da area como ajudar",
+        "content": "Por que nos ajudar"
+    },
+    {
+        "id": 10,
+        "name": "Apoio Psicossocial",
+        "content": "Terapia e grupos de apoio para pacientes e familiares" 
+    },
+    {
+        "id": 11,
+        "name": "Recursos Práticos",
+        "content": "Auxilio na busca de um medico ideal para você" 
+    },
+    {
+        "id": 12,
+        "name": "Pesquisa e Diagnóstico",
+        "content": "Cálculo e fornecimento de kits pós-mastectomia, lenços e produtos." 
+    },
+    {
+        "id": 13,
+        "name": "Educação e Consientização",
+        "content": "Cálculo e fornecimento de kits pós-mastectomia, lenços e produtos." 
+    },
+    {
+        "id": 14,
+        "name": "Titulo da area atividades",
+        "content": "Testemunhos"
+    },
+    {
+        "id": 15,
+        "name": "Texto da area atividades",
+        "content": "Historias reais de mulheres e apoiadores que fazem parte da nossa missão. Cada palavra nos inspira a continuar acolhendo, cuidando e transformando vidas" 
+    },
+    {
+        "id": 16,
+        "name": "Endereco da area de contato",
+        "content": "Itajai, Santa Catarina" 
+    },
+    {
+        "id": 17,
+        "name": "Telefone de contato",
+        "content": "+55 (47) 99978-2324" 
+    },
+    {
+        "id": 18,
+        "name": "Email",
+        "content": "Contato@amorprio.com.br" 
+    },
+    {
+        "id": 19,
+        "name": "Link instagram",
+        "content": "https://www.intagram.com/amorproprio"
+    },
+    {
+        "id": 20,
+        "name": "Link facebook",
+        "content": "facebook.com.br/amorproprio" 
+    },
+    {
+        "id": 21,
+        "name": "Texto roda pé",
+        "content": "© 2026 Amor Próprio de itajaí. Todos os direitos reservados" 
+    }
+]
