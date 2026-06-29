@@ -107,3 +107,8 @@ Todas as inserções de dados (POST/PUT) passam por classes de validação (Requ
 A lógica de negócio centraliza-se nos Controllers (ex: PostController, ActivityController), utilizando o poder do Eloquent ORM do Laravel para manipular o banco de dados sem a necessidade de queries SQL manuais.
 
 O sistema utiliza formatação de respostas JSON limpas e, quando necessário, Eager Loading para entregar os dados relacionados de forma rápida e eficiente para as requisições HTTP do cliente.
+
+**Link do projeto em Producao**
+```bash
+https://amorproprio.free.nf/
+```
