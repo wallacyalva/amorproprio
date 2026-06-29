@@ -1,60 +1,103 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 💖 API REST - Sistema da Associação Amor Próprio
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este projeto é uma API RESTful desenvolvida em Laravel para o gerenciamento de conteúdo institucional, atividades, publicações e mídias da **Associação Amor Próprio**. O sistema foi projetado com uma arquitetura dividida entre o consumo público de dados (para o site/front-end) e a administração privada (painel de controle), garantindo segurança através de autenticação via tokens.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🛠️ Requisitos do Sistema
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Para rodar este projeto localmente, você precisará ter instalado em sua máquina:
+* **PHP 8.2+** (Recomendado via XAMPP)
+* **Composer** (Gerenciador de dependências do PHP)
+* **MySQL** (Servidor de banco de dados)
+* **Git**
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🚀 Passo a Passo de Instalação e Configuração
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+**1. Clone o repositório e acesse a pasta**
+```bash
+git clone https://github.com/wallacyalva/amorproprio
+cd amorproprio
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**2. Instale as dependências do framework**
+```bash
+composer install
+```
 
-## Laravel Sponsors
+**3. Configure o Ambiente (.env)**
+Copie o arquivo de exemplo para criar o seu arquivo de configuração local:
+```bash
+cp .env.example .env
+```
+Abra o arquivo `.env` gerado e configure a conexão com o banco de dados (ajuste a senha se o seu root não for vazio):
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=academia_db
+DB_USERNAME=root
+DB_PASSWORD=
+```
+*Dica para ambiente de desenvolvimento:* Altere `APP_DEBUG=true` no seu arquivo `.env` para visualizar mensagens de erro detalhadas diretamente nas respostas da API em caso de falha.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+**4. Crie as Chaves de Segurança (Criptografia e JWT)**
+O Laravel e o sistema de autenticação JWT exigem chaves secretas para gerar tokens. Rode os comandos abaixo:
+```bash
+php artisan key:generate
+php artisan jwt:secret
+```
+Limpe o cache para garantir que as chaves foram carregadas:
+```bash
+php artisan config:clear
+php artisan cache:clear
+```
 
-### Premium Partners
+**5. Crie o Banco de Dados no MySQL**
+Abra o seu gerenciador de banco de dados (ex: MySQL Workbench ou phpMyAdmin) e execute:
+```sql
+CREATE SCHEMA academia_db;
+```
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+**6. Rode as Migrations e os Seeders**
+Este comando cria todas as tabelas na ordem correta e popula o banco com os dados iniciais:
+```bash
+php artisan migrate:fresh --seed
+```
 
-## Contributing
+**7. Inicie o Servidor**
+```bash
+php artisan serve
+```
+A API estará rodando em `http://127.0.0.1:8000`. Utilize o **Postman** ou **Insomnia** para testar as rotas (Lembre-se de usar o Header `Accept: application/json` nas suas requisições).
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 🧠 Entendendo a Arquitetura (O Caminho do Dado)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Para facilitar a compreensão do código e da estrutura da API, abaixo explicamos o fluxo de desenvolvimento e a divisão das rotas.
 
-## Security Vulnerabilities
+### 1. Banco de Dados e Migrations (A Base)
+As migrations foram construídas para mapear as entidades principais da Associação, criando tabelas como:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+1. `users`: Usuários administradores do sistema.
+2. `posts`: Artigos e notícias publicadas pela ONG.
+3. `activities`: Atividades, eventos e cronogramas.
+4. `media`: Gerenciamento de fotos, vídeos e assets visuais.
+5. `texts`: Textos institucionais e dinâmicos para exibição no front-end.
 
-## License
+### 2. Rotas (routes/api.php)
+O sistema de rotas foi arquitetado para separar claramente o que é público do que é administrativo, protegendo informações sensíveis:
+1. `Rotas Públicas (/public/)`: Métodos GET abertos (media, post, activity, text) feitos exclusivamente para o Front-end consumir e renderizar a interface visual sem necessidade de autenticação.
+2. `Rota de Auth (/auth/)`: Responsável por autenticar o usuário e emitir o token JWT.
+3. `Rotas Privadas (/v1/)`: Protegidas pelo middleware auth:api. Utiliza o padrão apiResource para fornecer um CRUD completo, permitindo que apenas administradores logados possam criar, editar e excluir registros.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-"# amorproprio" 
+### 3. Form Requests e Validações
+Todas as inserções de dados (POST/PUT) passam por classes de validação (Requests). Isso garante que campos obrigatórios (como o título de um post ou a URL de uma mídia) sejam preenchidos corretamente antes de atingirem o banco de dados, retornando erros claros em formato JSON (Status 422 Unprocessable Entity) caso algo falhe.
+
+### 4. Controllers e ORM (O Cérebro)
+A lógica de negócio centraliza-se nos Controllers (ex: PostController, ActivityController), utilizando o poder do Eloquent ORM do Laravel para manipular o banco de dados sem a necessidade de queries SQL manuais.
+
+O sistema utiliza formatação de respostas JSON limpas e, quando necessário, Eager Loading para entregar os dados relacionados de forma rápida e eficiente para as requisições HTTP do cliente.
