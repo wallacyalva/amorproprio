@@ -58,7 +58,7 @@ php artisan cache:clear
 **5. Crie o Banco de Dados no MySQL**
 Abra o seu gerenciador de banco de dados (ex: MySQL Workbench ou phpMyAdmin) e execute:
 ```sql
-CREATE SCHEMA academia_db;
+CREATE SCHEMA amor_proprio_db;
 ```
 
 **6. Rode as Migrations e os Seeders**
@@ -74,6 +74,12 @@ php artisan serve
 A API estará rodando em `http://127.0.0.1:8000`. Utilize o **Postman** ou **Insomnia** para testar as rotas (Lembre-se de usar o Header `Accept: application/json` nas suas requisições).
 
 ---
+
+## 🔐 Credenciais de Acesso (Testes)
+
+Ao rodar o comando de Seeders (passo 6), um usuário administrador padrão é criado automaticamente no banco de dados para permitir o acesso às rotas privadas. Utilize as seguintes credenciais na rota de Login (POST /api/auth/login) para gerar o seu token de acesso (JWT):
+### E-mail: amor@proprio.com
+### Senha: 123456
 
 ## 🧠 Entendendo a Arquitetura (O Caminho do Dado)
 
